@@ -62,6 +62,7 @@ describe('cli', function() {
     // then
     expect(nanogen.serve.calledOnce).to.be.true;
     expect(nanogen.serve.args[0]).to.deep.equal([mockConfig, flags]);
+    expect(nanogen.serve.args[0][1].port).to.be.a('number');
   });
 
   it('should build site with default options', function() {
